@@ -1,9 +1,8 @@
 import openpyxl
 import pyperclip
 import pyautogui
-
+#https://cadastro-produtos-devaprender.netlify.app/etapa2.html
 controle = 1
-xxxx = True
 xxx = 1
 woerkbook = openpyxl.load_workbook("produtos_ficticios.xlsx")
 sheet_produtos = woerkbook["Produtos"]
@@ -11,12 +10,9 @@ sheet_produtos = woerkbook["Produtos"]
 for linha in sheet_produtos.iter_rows(min_row=2):
     nome_produto = linha[0].value
     pyperclip.copy(nome_produto)
-    while xxx != 5:
-        print(controle)
-        xxx = xxx + 1
-
     pyautogui.click(1326,353,duration=0.01)
     pyautogui.hotkey("ctrl","v",)
+    print(controle)
     controle = controle + 1
 
 
@@ -79,14 +75,12 @@ for linha in sheet_produtos.iter_rows(min_row=2):
 
 
     tamanho = linha[10].value
+    pyautogui.click(1363,716,duration=0.01)
     if "Pequeno" in tamanho:
-        pyautogui.click(1363,716,duration=0.01)
         pyautogui.click(1378,748,duration=0.01)
     elif "Médio" in tamanho:
-        pyautogui.click(1363,716,duration=0.01)
         pyautogui.click(1385,772,duration=0.01)
     elif "Grande" in tamanho:
-        pyautogui.click(1363,716,duration=0.01)
         pyautogui.click(1379,792,duration=0.01)
 
 
@@ -131,7 +125,6 @@ for linha in sheet_produtos.iter_rows(min_row=2):
 
     pyautogui.click(1363,846,duration=0.01)
     foi3 = input("O site de merda ja carregou? ")
-
 
     pyautogui.click(1753,167,duration=0.01)
     foi4 = input("O site de merda ja carregou? ")
