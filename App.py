@@ -1,7 +1,6 @@
 import openpyxl
 import pyperclip
 import pyautogui
-from time import sleep
 
 controle = 1
 xxxx = True
